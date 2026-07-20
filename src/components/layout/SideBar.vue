@@ -6,20 +6,22 @@ interface TypesLink {
   href: string
 }
 
+interface ComponentProps {
+  isOpen?: boolean
+}
+
+const { isOpen } = defineProps<ComponentProps>()
+
 const links = ref<TypesLink[]>([
   {
-    name: 'Typography',
-    href: '/typography',
-  },
-  {
-    name: 'Button',
-    href: '/button',
+    name: 'Components',
+    href: '/components',
   },
 ])
 </script>
 
 <template>
-  <div class="sidebar">
+  <div :class="['sidebar', { '--isOpen': isOpen }]">
     <RouterLink
       v-for="link in links"
       :key="link.name"
@@ -42,7 +44,7 @@ const links = ref<TypesLink[]>([
   padding: 20px;
   transition: 0.2s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
-  transform: translateX(0px);
+  transform: translateX(-250px);
   &__link {
     display: block;
     border-radius: 12px;
@@ -53,6 +55,16 @@ const links = ref<TypesLink[]>([
     &:hover {
       border-color: var(--primary-color);
     }
+  }
+  &.--isOpen {
+    transform: translateX(0);
+    transition: 0.2s;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .sidebar.--isOpen {
+    transform: translateX(-250px);
   }
 }
 </style>
