@@ -25,7 +25,7 @@ const { isOpen } = defineProps<{ isOpen: boolean }>()
       :class="['header__side-btn', { '--isOpen': isOpen }]"
       @click="emit('toggle-sidebar')"
     >
-      <ArrowBtn fill="var(--primary-color)" />
+      <ArrowBtn fill="var(--color-primary)" />
     </div>
     <nav class="header__nav">
       <RouterLink
