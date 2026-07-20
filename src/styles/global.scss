@@ -1,0 +1,100 @@
+:root {
+
+  --text-primary: #212121;
+  --text-secondary: #666666;
+  --text-disabled: #9e9e9e;
+
+  --color-primary: #1976d2;
+  --color-primary-dark: #1565c0;
+  --color-primary-light: #42a5f5;
+  --color-primary-hover: #f6fafd;
+  --color-primary-selected: #edf4fc;
+  --color-primary-focus: #e3eef9;
+  --color-primary-focus-visible: #bad6f2;
+  --color-primary-outlined-border: #8bbae8;
+
+  --color-secondary: #9c27b0;
+  --color-secondary-dark: #7b1fa2;
+  --color-secondary-light: #ba68c8;
+
+  --color-error: #d32f2f;
+  --color-error-dark: #c62828;
+  --color-error-light: #ef5350;
+
+  --color-warning: #ef6c00;
+  --color-warning-dark: #e65100;
+  --color-warning-light: #ff9800;
+
+  --color-success: #2e7d32;
+  --color-success-dark: #1b5e20;
+  --color-success-light: #4caf50;
+
+  --color-action-active: #757575;
+  --color-action-hover: #f5f5f5;
+  --color-action-selected: #ebebeb;
+  --color-action-disabled: #bdbdbd;
+  --color-action-focus: #bdbdbd;
+
+  --color-white: #fff;
+  --color-black: #000000;
+
+  --fluid-10-14: clamp(0.625rem, 0.5524rem + 0.3226vw, 0.875rem);
+  --fluid-12-16: clamp(0.75rem, 0.6774rem + 0.3226vw, 1rem);
+  --fluid-12-20: clamp(0.75rem, 0.6048rem + 0.6452vw, 1.25rem);
+  --fluid-16-24: clamp(1rem, 0.8548rem + 0.6452vw, 1.5rem);
+  --fluid-18-34: clamp(1.125rem, 0.8347rem + 1.2903vw, 2.125rem);
+  --fluid-20-48: clamp(1.25rem, 0.7419rem + 2.2581vw, 3rem);
+  --fluid-24-60: clamp(1.5rem, 0.8468rem + 2.9032vw, 3.75rem);
+  --fluid-48-96: clamp(3rem, 2.129rem + 3.871vw, 6rem);
+
+  --primary-anim: .3s linear;
+
+  --font: "Plus Jakarta Sans", sans-serif;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+  background: #fff;
+  font-size: var(--fluid-12-20);
+  color: var(--text-primary);
+  font-family: var(--font);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--primary-anim);
+  &:hover {
+    color: var(--color-primary-light);
+  }
+}
+
+h1, .h1 {
+  font-size: var(--fluid-48-96);
+}
+
+h2, .h2 {
+  font-size: var(--fluid-24-60);
+}
+
+h3, .h3 {
+  font-size: var(--fluid-20-48);
+}
+
+h4, .h4 {
+  font-size: var(--fluid-18-34);
+}
+
+h5, .h5 {
+  font-size: var(--fluid-12-20);
+}
+
+h6, .h6 {
+  font-size: var(--fluid-16-24);
+}

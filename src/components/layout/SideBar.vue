@@ -53,7 +53,7 @@ const links = ref<TypesLink[]>([
     transition: 0.2s;
     margin-bottom: 10px;
     &:hover {
-      border-color: var(--primary-color);
+      border-color: var(--color-primary);
     }
   }
   &.--isOpen {
