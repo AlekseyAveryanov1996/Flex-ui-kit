@@ -1,0 +1,1 @@
+<template>examples-input</template>
