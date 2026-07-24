@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { SideBar, SiteHeader } from '../components/layout'
+import { SideBar, SiteHeader } from './components/layout'
 
 const isSideBarOpen = ref(true)
 
